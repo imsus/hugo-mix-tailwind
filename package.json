@@ -1,0 +1,31 @@
+{
+  "name": "hugo-mix-tailwind",
+  "description": "Hugo Boilerplate with Laravel Mix + Tailwind CSS",
+  "version": "1.0.0",
+  "main": "resources/js/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-vue": "^2.1.0",
+    "laravel-mix": "^1.6.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "tailwindcss": "^0.1.6",
+    "webpack": "^3.8.1"
+  },
+  "scripts": {
+    "hugo": "hugo server --templateMetrics --templateMetricsHint",
+    "dev": "npm run development",
+    "development":
+      "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch":
+      "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot":
+      "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production":
+      "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  }
+}
