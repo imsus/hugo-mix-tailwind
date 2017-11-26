@@ -1,0 +1,13 @@
+= doctype html
+html lang="en"
+  head
+    meta charset="UTF-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta http-equiv="X-UA-Compatible" content="ie=edge"
+    title Index Ace
+    link rel="stylesheet" href="/css/style.css"
+  body
+    .min-h-screen.bg-grey-lighter.flex.items-center.justify-center
+      .border-grey-dark.border-2.p-4.leading-normal.bg-white.text-center.mx-4
+        h1 Hugo Mix Tailwind
+        div A Hugo Boilerplate with Laravel Mix + Tailwind CSS

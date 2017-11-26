@@ -23,7 +23,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-var defaultConfig = require('tailwindcss').defaultConfig()
+// var defaultConfig = require('tailwindcss/defaultConfig')()
 
 /*
 |-------------------------------------------------------------------------------
@@ -396,16 +396,19 @@ module.exports = {
   | is provided, it will be made available as the non-suffixed `.rounded`
   | utility.
   |
-  | Class name: .rounded{-radius?}
+  | If your scale includes a `0` value to reset already rounded corners, it's
+  | a good idea to put it first so other values are able to override it.
+  |
+  | Class name: .rounded{-side?}{-size?}
   |
   */
 
   borderRadius: {
-    default: '.25rem',
+    none: '0',
     sm: '.125rem',
+    default: '.25rem',
     lg: '.5rem',
-    full: '9999px',
-    none: '0'
+    full: '9999px'
   },
 
   /*
@@ -622,6 +625,7 @@ module.exports = {
   */
 
   margin: {
+    auto: 'auto',
     px: '1px',
     '0': '0',
     '1': '0.25rem',
@@ -728,15 +732,59 @@ module.exports = {
 
   /*
   |-----------------------------------------------------------------------------
-  | Packages
+  | Options                  https://tailwindcss.com/docs/configuration#options
   |-----------------------------------------------------------------------------
   |
-  | Here is where you can define the configuration for any Tailwind packages
-  | you're using. These can be utility packs, component bundles, or even
-  | complete themes. You'll want to reference each package's
-  | documentation for a list of settings available for it.
+  | Here is where you can set your Tailwind configuration options. For more
+  | details about these options, visit the configuration options documentation.
   |
   */
 
-  packages: {}
+  options: {
+    prefix: '',
+    important: false,
+    modules: {
+      appearance: ['responsive'],
+      backgroundColors: ['responsive', 'hover'],
+      backgroundPosition: ['responsive'],
+      backgroundSize: ['responsive'],
+      borderColors: ['responsive', 'hover'],
+      borderRadius: ['responsive'],
+      borderStyle: ['responsive'],
+      borderWidths: ['responsive'],
+      cursor: ['responsive'],
+      display: ['responsive'],
+      flexbox: ['responsive'],
+      float: ['responsive'],
+      fonts: ['responsive'],
+      fontWeights: ['responsive', 'hover'],
+      height: ['responsive'],
+      leading: ['responsive'],
+      lists: ['responsive'],
+      margin: ['responsive'],
+      maxHeight: ['responsive'],
+      maxWidth: ['responsive'],
+      minHeight: ['responsive'],
+      minWidth: ['responsive'],
+      negativeMargin: ['responsive'],
+      opacity: ['responsive'],
+      overflow: ['responsive'],
+      padding: ['responsive'],
+      pointerEvents: ['responsive'],
+      position: ['responsive'],
+      resize: ['responsive'],
+      shadows: ['responsive'],
+      textAlign: ['responsive'],
+      textColors: ['responsive', 'hover'],
+      textSizes: ['responsive'],
+      textStyle: ['responsive', 'hover'],
+      tracking: ['responsive'],
+      userSelect: ['responsive'],
+      verticalAlign: ['responsive'],
+      visibility: ['responsive'],
+      whitespace: ['responsive'],
+      width: ['responsive'],
+      zIndex: ['responsive']
+    }
+  }
 }
