@@ -1,0 +1,3 @@
+baseURL = "https://hugo-mix-tailwind.netlify.com/"
+languageCode = "en-us"
+title = "Hugo | Laravel Mix | TailwindCSS"
