@@ -1,11 +1,9 @@
-{{ define "header" }}
-    {{ partial "header.html" . }}
-{{ end }}
-
 {{ define "contents" }}
-    <div>{{ .Content }}</div>
-{{ end }}
-
-{{ define "footer" }}
-    {{ partial "footer.html" . }}
+  <div class="min-h-screen bg-black text-white font-sans">
+    <div class="mx-auto max-w-lg py-16 px-8 text-center">
+      <h1 class="mb-4 font-medium text-4xl">Hugo Mix Tailwind</h1>
+      <p class="leading-normal text-xl font-light mb-8">A Hugo starter template with built-in Laravel Mix and Tailwind CSS for speedy website&nbsp;development.</p>
+      <a class="inline-flex items-center no-underline bg-grey-lighter px-8 h-10 rounded text-black font-medium text-sm border" href="https://github.com/imsus/hugo-mix-tailwind">Github Repo</a>
+    </div>
+  </div>
 {{ end }}
