@@ -28,4 +28,9 @@ mix
       require('autoprefixer')
     ]
   })
+  .browserSync({
+    proxy: 'http://localhost:1313',
+    files: ['src/**/*.{js,css,vue}', 'layouts/**/*.html'],
+    notify: false
+  })
   .disableNotifications()
